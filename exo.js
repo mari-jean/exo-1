@@ -33,10 +33,10 @@ class Magicien extends Personnage{
     }
     //fonction attaquer
     attaquer(personnage){
-        console.log(`${this.pseudo} attaque ${personnage.pseudo} en lancant un sort ${this.attaque} degats`);
-
         //reduit la sante de l adversaire 
         personnage.sante -= this.attaque;
+
+        console.log(`${this.pseudo} attaque ${personnage.pseudo} en lancant un sort ${this.attaque} degats`);
 
         //appel la methode evoluer()
         this.evoluer();
@@ -46,11 +46,11 @@ class Magicien extends Personnage{
     }
 
     coupSpecial(personnage){
-        console.log(`${this.pseudo} attaque avec son coup special puissance des arcanes ${personnage.pseudo} ${this.attaque * 5} degats`)
-
         //reduit la sante de l adversaire par 5 fois l attaque du personnage actuel
         personnage.sante -= this.attaque *5;
 
+        console.log(`${this.pseudo} attaque avec son coup special puissance des arcanes ${personnage.pseudo} ${this.attaque * 5} degats`)
+        
         //appel la methode evoluer()
         this.evoluer();
 
@@ -66,11 +66,10 @@ class Guerrier extends Personnage{
     }
     //fonction attaquer
     attaquer(personnage){
-        console.log(`${this.pseudo} attaque ${personnage.pseudo} avec son epee ${this.attaque} degats`);
-
-
         //reduit la sante de l adversaire 
         personnage.sante -= this.attaque;
+
+        console.log(`${this.pseudo} attaque ${personnage.pseudo} avec son epee ${this.attaque} degats`);
 
         //appel la methode evoluer()
         this.evoluer();
@@ -80,11 +79,11 @@ class Guerrier extends Personnage{
     }
 
     coupSpecial(personnage){
-        console.log(`${this.pseudo} attaque avec son coup special haches de guerre ${personnage.pseudo} ${this.attaque * 5} degats`)
-        
         //reduit la sante de l adversaire par 5 fois l attaque du personnage actuel
         personnage.sante -= this.attaque *5;
 
+        console.log(`${this.pseudo} attaque avec son coup special haches de guerre ${personnage.pseudo} ${this.attaque * 5} degats`)
+        
         //appel la methode evoluer()
         this.evoluer();
 
